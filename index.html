@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfólio | Geovana Moura</title>
+</head>
+<body>
+    <div class="particulas"></div>
+    
+    <!-- NAVEGAÇÃO - apenas o menu -->
+    <nav class="navegacao">
+        <ul class="menu">
+            <li><a href="#inicio" class="menu-link">Início</a></li>
+            <li><a href="#sobre" class="menu-link">Sobre</a></li>
+            <li><a href="#projetos" class="menu-link">Projetos</a></li>
+            <li><a href="#contatos" class="menu-link">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="inicio" class="cabecalho">
+        <div class="foto-wrapper">
+            <img src="./img/geovana.jpg" alt="Foto de Geovana Moura" class="foto-perfil" id="fotoPerfil">
+        </div>
+        <h1>Geovana Moura</h1>
+        <p class="cabecalho-sub-titulo">Desenvolvedora Front End</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At soluta nesciunt pariatur adipisci tenetur! Illo nihil mollitia nam, ab distinctio, quaerat debitis, modi culpa autem sunt saepe sit placeat. Voluptates?
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+            <div class="projetos-card">
+                <img src="./img/vendas.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Impact Store</h3>
+                    <p class="paragrafo-projetos">Loja virtual para venda de produtos digitais como jogos e giftcards com design responsivo.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/vendas.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Impact Store</h3>
+                    <p class="paragrafo-projetos">Loja virtual para venda de produtos digitais como jogos e giftcards com design responsivo.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/vendas.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Impact Store</h3>
+                    <p class="paragrafo-projetos">Loja virtual para venda de produtos digitais como jogos e giftcards com design responsivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulos">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            
+            <div class="grupo-form">
+                <textarea class="text-form" placeholder="Digite sua Mensagem" rows="4" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar formulário</button>
+        </form>
+    </section>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+    const foto = document.querySelector('.foto-perfil'); // Agora selecionando pela classe
+    
+    foto.addEventListener('mousemove', function(e) {
+        const rect = foto.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centroX = rect.width / 2;
+        const centroY = rect.height / 2;
+        const distanciaX = x - centroX;
+        const distanciaY = y - centroY;
+        
+        foto.style.boxShadow = `
+            0 0 15px rgba(79, 70, 229, 0.8),
+            ${distanciaX/8}px ${distanciaY/8}px 40px rgba(124, 58, 237, 0.6)
+        `;
+        foto.style.transform = 'scale(1.05)';
+    });
+
+    foto.addEventListener('mouseleave', function() {
+        foto.style.boxShadow = '0 0 20px rgba(79, 70, 229, 0.3)';
+        foto.style.transform = 'scale(1)';
+    });
+});
+
+        function enviarWhats(event) {
+            event.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = "5581987933964";
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
+            const msgFormatada = encodeURIComponent(texto);
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
