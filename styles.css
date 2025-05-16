@@ -21,6 +21,7 @@ html {
 body {
     background-color: var(--escuro);
     color: var(--claro);
+    cursor: url('./cursor/cursor.png'), auto;
 }
 
 .navegacao {
@@ -77,15 +78,19 @@ body {
     height: 200px;
 }
 
+.foto-animada {
+    animation: flutuar 5s ease-in-out infinite;
+}
+
 .foto-perfil {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     border: 4px solid var(--vidro);
-    transition: all 0.4s ease;
+    transition: all 0.8s ease-out;
     position: relative;
     z-index: 1;
-    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+    animation: flutuar 5s ease-in-out infinite;
 }
 
 .foto-wrapper::before {
@@ -107,7 +112,6 @@ body {
     transition: opacity 0.4s ease;
 }
 
-/* Mantenha sua animação de flutuar */
 .foto-perfil:not(:hover) {
     animation: flutuar 5s ease-in-out infinite;
 }
@@ -143,11 +147,32 @@ h1 {
     border: 1px solid var(--vidro);
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    transition: all 0.8s ease;
+}
+
+.sobre-caixa:hover {
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transform: translateY(-10px) scale(1.03);
 }
 
 .sobre-paragrafo {
     font-size: 1.5rem;
     margin-bottom: 1.2rem;
+
+}
+
+.linguagens-sobre {
+    text-align: center;
+    gap: 15px; 
+    margin-top: 20px; 
+}
+
+.linguagens-sobre img {
+    width: 50px; 
+    height: 50px;
+    object-fit: contain;
+    margin: 0 5px;
 
 }
 
@@ -170,7 +195,6 @@ h1 {
     border: 1px solid var(--vidro);
     overflow: hidden;
     transition: all 0.5s ease;
-    cursor: pointer;
 }
 
 .projetos-titulo {
@@ -207,6 +231,13 @@ h1 {
 
 .info-projetos {
     margin-bottom: 5px;
+}
+
+.botao-projetos {
+    color: var(--secundaria);
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .contatos {
@@ -255,7 +286,6 @@ h1 {
     padding: 1rem 2rem;
     border: none;
     border-radius: 8px;
-    cursor: pointer;
     font-weight: bold;
     width: 100%;
     transition: all 0.5 ease;
@@ -264,6 +294,62 @@ h1 {
 .botao-form:hover {
     transform: translateY(-4px);
     box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+}
+
+.botoes-contato {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.botao-contato {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-weight: 500;
+    min-width: 160px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid var(--vidro);
+}
+
+.linkedin { 
+    background-color: #25D366;
+    overflow: hidden;
+    transition: all 0.8s ease;
+}
+
+.linkedin:hover{
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transform: translateY(-10px) scale(1.03);
+}
+
+.email { 
+    background-color: #EA4335;
+    overflow: hidden;
+    transition: all 0.8s ease;
+}
+
+.email:hover{
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transform: translateY(-10px) scale(1.03);
+}
+
+.github {
+    background-color: #333;
+    overflow: hidden;
+    transition: all 0.8s ease;
+}
+
+.github:hover{
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transform: translateY(-10px) scale(1.03);
 }
 
 .particulas {
