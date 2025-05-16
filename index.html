@@ -9,7 +9,6 @@
 <body>
     <div class="particulas"></div>
     
-    <!-- NAVEGAÇÃO - apenas o menu -->
     <nav class="navegacao">
         <ul class="menu">
             <li><a href="#inicio" class="menu-link">Início</a></li>
@@ -19,10 +18,11 @@
         </ul>
     </nav>
 
-    <!-- CONTEÚDO PRINCIPAL -->
     <main id="inicio" class="cabecalho">
         <div class="foto-wrapper">
-            <img src="./img/geovana.jpg" alt="Foto de Geovana Moura" class="foto-perfil" id="fotoPerfil">
+            <div class="foto-animada">
+                <img src="./img/geovana.jpg" alt="Foto de Geovana Moura" class="foto-perfil" id="fotoPerfil">
+            </div>
         </div>
         <h1>Geovana Moura</h1>
         <p class="cabecalho-sub-titulo">Desenvolvedora Front End</p>
@@ -31,9 +31,18 @@
     <section id="sobre" class="sobre">
         <h2 class="sobre-titulo">Sobre Mim</h2>
         <div class="sobre-caixa">
-            <p class="sobre-paragrafo">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. At soluta nesciunt pariatur adipisci tenetur! Illo nihil mollitia nam, ab distinctio, quaerat debitis, modi culpa autem sunt saepe sit placeat. Voluptates?
-            </p>
+            <p class="sobre-paragrafo">Desenvolvedora Front End com 2 anos de experiência. Trabalho com HTML5, CSS3, JavaScript e React para criar interfaces funcionais e responsivas. Também possuo conhecimento em PHP, Python, Java e SQLite3 para integrações com back-end.</p>
+            <div class="linguagens-sobre">
+                <img src="./img/html5.png" alt="HTML5" class="html5-sobre">
+                <img src="./img/css3.png" alt="CSS3" class="css-sobre">
+                <img src="./img/javascript.png" alt="Js" class="javascript-sobre">
+                <img src="./img/php.png" alt="PHP" class="php-sobre">
+                <img src="./img/python.png" alt="Python" class="python-sobre">
+                <img src="./img/java.png" alt="Java" class="java-sobre">
+                <img src="./img/sqlite3.png" alt="SQLite3" class="sqlite3-sobre">
+                <img src="./img/bootstrap.png" alt="Python" class="bootstrap-sobre">
+
+            </div>
         </div>
     </section>
 
@@ -45,26 +54,31 @@
                 <div class="caixa-textos-projetos">
                     <h3 class="info-projetos">Impact Store</h3>
                     <p class="paragrafo-projetos">Loja virtual para venda de produtos digitais como jogos e giftcards com design responsivo.</p>
+                    <a  href="https://github.com/geofmoura/produtosDigitais" class="botao-projetos">Ver Projeto ➙</a>
                 </div>
             </div>
 
             <div class="projetos-card">
-                <img src="./img/vendas.png" alt="Projeto 1" class="projetos-imagem">
+                <img src="./img/snake.png" alt="Projeto 1" class="projetos-imagem">
                 <div class="caixa-textos-projetos">
-                    <h3 class="info-projetos">Impact Store</h3>
-                    <p class="paragrafo-projetos">Loja virtual para venda de produtos digitais como jogos e giftcards com design responsivo.</p>
+                    <h3 class="info-projetos">Jogo da Cobrinha</h3>
+                    <p class="paragrafo-projetos">Jogo da cobrinha simples com interação de cores, level e som.</p>
+                    <a class="botao-projetos">Ver Projeto ➙</a>
                 </div>
             </div>
 
             <div class="projetos-card">
-                <img src="./img/vendas.png" alt="Projeto 1" class="projetos-imagem">
+                <img src="./img/memory.png" alt="Projeto 1" class="projetos-imagem">
                 <div class="caixa-textos-projetos">
-                    <h3 class="info-projetos">Impact Store</h3>
-                    <p class="paragrafo-projetos">Loja virtual para venda de produtos digitais como jogos e giftcards com design responsivo.</p>
+                    <h3 class="info-projetos">Jogo da Memória</h3>
+                    <p class="paragrafo-projetos">Jogo da Memória do Bob Esponja, com interação de tempo para avançar nível.</p>
+                    <a class="botao-projetos">Ver Projeto ➙</a>
                 </div>
             </div>
         </div>
     </section>
+
+
 
     <section id="contatos" class="contatos">
         <h2 class="contatos-titulos">Entre em Contato</h2>
@@ -81,31 +95,67 @@
         </form>
     </section>
 
+    <section class="secao-contato">
+        <div class="botoes-contato">
+            <a href="www.linkedin.com/in/geovanafmoura" class="botao-contato linkedin">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="#fff" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+
+                <span>LinkedIn</span>
+            </a>
+            <a href="mailto:mrsgeovanamoura@.com.br" class="botao-contato email">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="#fff" d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
+                </svg>
+                <span>Email</span>
+            </a>
+            <a href="https://github.com/geofmoura" class="botao-contato github">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="#fff" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+
+                <span>Github</span>
+            </a>
+        </div>
+    </section>
+
+
     <script>
-       document.addEventListener('DOMContentLoaded', function() {
-    const foto = document.querySelector('.foto-perfil'); // Agora selecionando pela classe
-    
-    foto.addEventListener('mousemove', function(e) {
-        const rect = foto.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centroX = rect.width / 2;
-        const centroY = rect.height / 2;
-        const distanciaX = x - centroX;
-        const distanciaY = y - centroY;
-        
+      document.addEventListener('DOMContentLoaded', function () {
+    const wrapper = document.querySelector('.foto-wrapper');
+    const foto = document.querySelector('.foto-perfil');
+
+    window.addEventListener('mousemove', function (e) {
+        const rect = wrapper.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+
+        const deltaX = e.clientX - centerX;
+        const deltaY = e.clientY - centerY;
+        const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+
+        const maxDistance = window.innerWidth / 2;
+        const intensity = Math.max(0, 1 - distance / maxDistance);
+
+        const isInside =
+            e.clientX >= rect.left &&
+            e.clientX <= rect.right &&
+            e.clientY >= rect.top &&
+            e.clientY <= rect.bottom;
+
         foto.style.boxShadow = `
-            0 0 15px rgba(79, 70, 229, 0.8),
-            ${distanciaX/8}px ${distanciaY/8}px 40px rgba(124, 58, 237, 0.6)
+            0 0 ${15 + intensity * 30}px rgba(79, 70, 229, ${0.2 + intensity * 0.6}),
+            ${deltaX / 12}px ${deltaY / 12}px ${20 + intensity * 30}px rgba(124, 58, 237, ${0.2 + intensity * 0.4})
         `;
-        foto.style.transform = 'scale(1.05)';
+
     });
 
-    foto.addEventListener('mouseleave', function() {
-        foto.style.boxShadow = '0 0 20px rgba(79, 70, 229, 0.3)';
-        foto.style.transform = 'scale(1)';
+    window.addEventListener('mouseleave', function () {
+        foto.style.boxShadow = 'none';
     });
 });
+
 
         function enviarWhats(event) {
             event.preventDefault();
